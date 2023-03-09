@@ -1,0 +1,212 @@
+.gigs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gigs .container {
+  width: 1000px;
+  padding: 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .gigs .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rrem;
+  }
+  .gigs .container p {
+    display: none;
+  }
+}
+
+.gigs .container .breadcrumbs {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #555;
+}
+
+.gigs .container p {
+  color: #999;
+  font-weight: 300;
+}
+
+.gigs .container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .gigs .container .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+  }
+}
+
+.gigs .container .menu .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  color: #555;
+  font-weight: 300;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .gigs .container .menu .left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+  }
+}
+
+.gigs .container .menu .left input {
+  padding: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  outline: none;
+}
+
+.gigs .container .menu .left input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.gigs .container .menu .left input:-ms-input-placeholder {
+  color: #999;
+}
+
+.gigs .container .menu .left input::-ms-input-placeholder {
+  color: #999;
+}
+
+.gigs .container .menu .left input::placeholder {
+  color: #999;
+}
+
+.gigs .container .menu .left button {
+  padding: 5px 10px;
+  background-color: #1dbf73;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gigs .container .menu .right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.gigs .container .menu .right .sortBy {
+  color: #555;
+  font-weight: 300;
+}
+
+.gigs .container .menu .right .sortType {
+  font-weight: 500;
+}
+
+.gigs .container .menu .right img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.gigs .container .menu .right .rightMenu {
+  padding: 20px;
+  background-color: white;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  color: #555;
+}
+
+.gigs .container .menu .right .rightMenu span {
+  cursor: pointer;
+}
+
+.gigs .container .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .gigs .container .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+}
+/*# sourceMappingURL=Gigs.css.map */

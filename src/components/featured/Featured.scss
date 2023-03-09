@@ -1,0 +1,160 @@
+.featured {
+  // height: 600px;
+  // width: 100%;
+  // display: flex;
+  // justify-content: center;
+  // background-color: #013914;
+  color: white;
+  
+
+  @media (max-width: 767px) {
+     
+    }
+
+  .container {
+    //  background-color: yellow;
+    
+     height: 600px;
+     max-width: 1200px;
+     display: flex;
+     margin:0 auto;
+     align-items: center;
+     padding: 10px;
+    @media (max-width: 928px) {
+       flex-direction: column;
+      }
+
+    
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @media (max-width: 928px) {
+          
+         
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+      h1 {
+        font-size: 50px;
+        
+
+        span {
+          font-style: italic;
+          font-weight: 300;
+        }
+      }
+
+            @media (max-width: 928px) {
+              h1 {
+                font-size: 20px;
+              }
+              
+            }
+
+      .search {
+        background-color: white;
+       
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+
+        @media (min-width: 360px) and (max-width: 928px) {
+           
+            width: 300px;
+        
+          }
+
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+            
+          }
+
+                    
+
+          input {
+            border: none;
+            outline: none;
+
+            &::placeholder {
+              color: gray;
+            }
+          }
+
+                    
+        }
+
+        button {
+          width: 120px;
+          height: 50px;
+          border: none;
+          background-color: #1dbf73;
+          color: white;
+          align-self: flex-end;
+          cursor: pointer;
+        }
+      }
+
+      .popular {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media (min-width: 374px) and (max-width: 928px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        
+        
+          }
+
+        span {
+          width: max-content;
+        }
+
+        button {
+          width: max-content;
+          color: white;
+          border: 1px solid white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background-color: transparent;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .right {
+      height: 100%;
+
+      img {
+        width: 450px;
+        height: 100%;
+        object-fit: contain;
+      }
+
+         @media (max-width: 932px) {
+           img {
+             width: 270px;
+           }
+         }
+
+           
+    }
+
+
+  }
+}
+

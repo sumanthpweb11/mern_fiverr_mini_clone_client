@@ -1,0 +1,140 @@
+.features {
+  background-color: #f1fdf7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 100px 0px;
+}
+
+.features.dark {
+  background-color: #0d084d;
+}
+
+.features.dark h1 {
+  color: white !important;
+}
+
+.features.dark i {
+  font-weight: 300;
+}
+
+.features.dark p {
+  margin-bottom: 20px;
+  color: white !important;
+}
+
+.features.dark .title {
+  color: white !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+}
+
+.features.dark button {
+  background-color: #1dbf73;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.features .container {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  gap: 25px;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .features .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rrem;
+  }
+}
+
+.features .container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.features .container .item:first-child {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.features .container .item:last-child {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.features .container .item img {
+  width: 100%;
+}
+
+.features .container .item h1 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.features .container .item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #666;
+}
+
+.features .container .item .title img {
+  width: 20px;
+  height: 20px;
+}
+
+.features .container .item p {
+  font-size: 12px;
+  font-weight: 300;
+  color: gray;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+
+.features .container .item video {
+  width: 450px;
+}
+/*# sourceMappingURL=Features.css.map */

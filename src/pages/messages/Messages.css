@@ -1,0 +1,91 @@
+.messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.messages .container {
+  width: 1000px;
+  padding: 50px 0px;
+}
+
+.messages .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .messages .container .title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+  }
+}
+
+.messages .container .title button {
+  background-color: #1dbf73;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.messages .container table {
+  width: 100%;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .messages .container table {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.messages .container table tr {
+  height: 100px;
+}
+
+.messages .container table tr th {
+  text-align: left;
+}
+
+.messages .container table tr td {
+  padding: 10px;
+}
+
+.messages .container table tr td:first-child {
+  font-weight: 500;
+}
+
+.messages .container table tr td:nth-child(2), .messages .container table tr td:nth-child(3) {
+  color: gray;
+}
+
+.messages .container table tr button {
+  background-color: #1dbf73;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.messages .container table tr.active {
+  background-color: #1dbf730f;
+}
+/*# sourceMappingURL=Messages.css.map */

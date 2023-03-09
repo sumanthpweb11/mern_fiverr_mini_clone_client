@@ -1,0 +1,88 @@
+.myGigs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #555;
+}
+
+.myGigs .container {
+  width: 1000px;
+  padding: 50px 0px;
+}
+
+.myGigs .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .myGigs .container .title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+  }
+}
+
+.myGigs .container .title button {
+  background-color: #1dbf73;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.myGigs .container table {
+  width: 100%;
+}
+
+@media (min-width: 319px) and (max-width: 928px) {
+  .myGigs .container table {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.myGigs .container table tr {
+  height: 50px;
+}
+
+.myGigs .container table tr th {
+  text-align: left;
+}
+
+.myGigs .container table tr td sup {
+  font-size: 12px;
+}
+
+.myGigs .container table tr td .image {
+  width: 50px;
+  height: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.myGigs .container table tr td .delete {
+  width: 20px;
+  cursor: pointer;
+}
+
+.myGigs .container table tr:nth-child(even) {
+  background-color: #1dbf730f;
+}
+/*# sourceMappingURL=MyGigs.css.map */
