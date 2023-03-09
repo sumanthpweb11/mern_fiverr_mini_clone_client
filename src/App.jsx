@@ -6,6 +6,8 @@ import Home from "./pages/home/Home";
 import { Footer } from "./components/Footer/Footer";
 import Gigs from "./pages/gigs/Gigs";
 import Gig from "./pages/gig/Gig";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
 import Orders from "./pages/orders/Orders";
 import MyGigs from "./pages/myGigs/MyGigs";
 import Add from "./pages/add/Add";
@@ -40,6 +42,14 @@ function App() {
         {
           path: "/gig/:id",
           element: <Gig />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
         },
         {
           path: "/orders",
