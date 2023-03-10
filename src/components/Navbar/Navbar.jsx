@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
 import "./Navbar.scss";
 
-const Navbar = () => {
+function Navbar() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
 
   const { pathname } = useLocation();
-  const navigate = useNavigate();
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", isActive);
-
     return () => {
       window.removeEventListener("scroll", isActive);
     };
@@ -24,13 +22,15 @@ const Navbar = () => {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
+  const navigate = useNavigate();
+
   const handleLogout = async () => {
     try {
       await newRequest.post("/auth/logout");
       localStorage.setItem("currentUser", null);
       navigate("/");
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -38,7 +38,7 @@ const Navbar = () => {
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
-          <Link to="/" className="link">
+          <Link className="link" to="/">
             <span className="text">fiverr</span>
           </Link>
           <span className="dot">.</span>
@@ -47,25 +47,20 @@ const Navbar = () => {
           <span>Fiverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          <span>Sign in</span>
-          {!currentUser?.isSeller && <span>Become a seller</span>}
-          {!currentUser && <button>Join</button>}
-          {currentUser && (
+          {!currentUser?.isSeller && <span>Become a Seller</span>}
+          {currentUser ? (
             <div className="user" onClick={() => setOpen(!open)}>
-              <img
-                src={currentUser.img || "/img/noavatar.jpg"}
-                alt="profile pic"
-              />
+              <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />
               <span>{currentUser?.username}</span>
               {open && (
                 <div className="options">
-                  {currentUser?.isSeller && (
+                  {currentUser.isSeller && (
                     <>
                       <Link className="link" to="/mygigs">
                         Gigs
                       </Link>
                       <Link className="link" to="/add">
-                        Add new Gig
+                        Add New Gig
                       </Link>
                     </>
                   )}
@@ -81,10 +76,19 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+          ) : (
+            <>
+              <Link to="/login" className="link">
+                Sign in
+              </Link>
+              <Link className="link" to="/register">
+                <button>Join</button>
+              </Link>
+            </>
           )}
         </div>
       </div>
-      {active && pathname !== "/" && (
+      {(active || pathname !== "/") && (
         <>
           <hr />
           <div className="menu">
@@ -116,10 +120,11 @@ const Navbar = () => {
               Lifestyle
             </Link>
           </div>
+          <hr />
         </>
       )}
     </div>
   );
-};
+}
 
 export default Navbar;
