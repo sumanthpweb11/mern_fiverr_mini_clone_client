@@ -7,7 +7,7 @@ import CatCard from "../../components/catCard/CatCard";
 import ProjectCard from "../../components/projectcard/ProjectCard";
 import { cards, projects } from "../../data";
 import { useMediaQuery } from "react-responsive";
-import Features from "../../components/features/Features";
+// import Features from "../../components/features/Features";
 
 const Home = () => {
   const number = {
