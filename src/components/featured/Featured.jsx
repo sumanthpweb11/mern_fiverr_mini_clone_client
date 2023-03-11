@@ -1,26 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import newRequest from "../../utils/newRequest";
+import { useNavigate } from "react-router-dom";
+
 import "./Featured.scss";
 
 const Featured = () => {
   const [input, setInput] = useState("");
 
   const navigate = useNavigate();
-  const { search } = useLocation();
-
-  const { isLoading, error, data, refetch } = useQuery({
-    queryKey: ["gigsearch"],
-    queryFn: () =>
-      newRequest.get(`/gigs${search}=${input}`).then((res) => {
-        return res.data;
-      }),
-  });
 
   const handleSubmit = () => {
     navigate(`/gigs?search=${input}`);
-    refetch();
   };
   return (
     <div className="featured">
