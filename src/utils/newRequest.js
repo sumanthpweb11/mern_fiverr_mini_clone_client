@@ -4,8 +4,9 @@ const newRequest = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
   // withCredentials: true,
   headers: {
-    Authorization: `Bearer ${localStorage.getItem("currentUser")}`,
+    "Content-type": "application/json",
   },
+  withCredentials: true, // for cookies to come
 });
 
 export default newRequest;
