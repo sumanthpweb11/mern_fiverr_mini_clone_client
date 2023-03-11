@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import getCurrentUser from "../../utils/getCurrentUser";
 import newRequest from "../../utils/newRequest";
 import "./Navbar.scss";
 
@@ -20,7 +21,7 @@ function Navbar() {
     };
   }, []);
 
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const currentUser = getCurrentUser();
 
   const navigate = useNavigate();
 
