@@ -7,7 +7,7 @@ const upload = async (file) => {
 
   try {
     const res = await axios.post(
-      "https://api.cloudinary.com/v1_1/sumanthpweb11/image/upload",
+      import.meta.env.REACT_APP_CLOUD_UPLOAD,
 
       data
     );
