@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Gigs.scss";
 import GigCard from "../../components/gigCard/GigCard";
 import { useQuery } from "@tanstack/react-query";
-// import newRequest from "../../utils/newRequest";
+import newRequest from "../../utils/newRequest";
 import { useLocation } from "react-router-dom";
 
 function Gigs() {
@@ -11,21 +11,18 @@ function Gigs() {
   const minRef = useRef();
   const maxRef = useRef();
 
-  //  newRequest
-  //       .get(
-  //         `/gigs${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`
-  //       )
-
   const { search } = useLocation();
 
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["gigs"],
     queryFn: () =>
-      fetch(
-        `https://mern-fiverr-app-api.onrender.com/gigs/${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`
-      ).then((res) => {
-        return res.data;
-      }),
+      newRequest
+        .get(
+          `/gigs/${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`
+        )
+        .then((res) => {
+          return res.data;
+        }),
   });
 
   // console.log(data);
