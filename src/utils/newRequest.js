@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const newRequest = axios.create({
-  baseURL: import.meta.env.REACT_APP_DEV,
+  baseURL: import.meta.env.VITE_BASE_URL,
   withCredentials: true,
 });
 

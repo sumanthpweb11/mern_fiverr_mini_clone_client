@@ -7,7 +7,7 @@ const upload = async (file) => {
 
   try {
     const res = await axios.post(
-      import.meta.env.REACT_APP_CLOUD_UPLOAD,
+      import.meta.env.VITE_CLOUD_UPLOAD,
 
       data
     );
