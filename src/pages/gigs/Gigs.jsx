@@ -22,7 +22,7 @@ function Gigs() {
     queryKey: ["gigs"],
     queryFn: () =>
       fetch(
-        `https://mern-fiverr-app-api.onrender.com/gigs${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`
+        `https://mern-fiverr-app-api.onrender.com/gigs/${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`
       ).then((res) => {
         return res.data;
       }),
