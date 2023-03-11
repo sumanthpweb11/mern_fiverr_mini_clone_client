@@ -21,14 +21,16 @@ import {
 import "./app.scss";
 import { Pay } from "./pages/pay/Pay";
 import Success from "./pages/success/Success";
+import getCurrentUser from "./utils/getCurrentUser";
 
 function App() {
+  const currentUser = getCurrentUser();
   const queryClient = new QueryClient();
   const Layout = () => {
     return (
       <div className="app">
         <QueryClientProvider client={queryClient}>
-          <Navbar />
+          <Navbar currentUser={currentUser} />
           <Outlet />
           <Footer />
         </QueryClientProvider>
