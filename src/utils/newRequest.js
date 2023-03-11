@@ -4,7 +4,7 @@ const newRequest = axios.create({
   baseURL: import.meta.env.REACT_APP_DEV,
   withCredentials: true,
   headers: {
-    Authorization: localStorage.getItem("currentUser"),
+    Authorization: `Bearer ${localStorage.getItem("currentUser")}`,
   },
 });
 
