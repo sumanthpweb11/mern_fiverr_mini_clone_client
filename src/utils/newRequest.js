@@ -6,7 +6,7 @@ const newRequest = axios.create({
   headers: {
     "Content-type": "application/json",
   },
-  withCredentials: true, // for cookies to come
+  // withCredentials: true, // for cookies to come
 });
 
 export default newRequest;
